@@ -45,7 +45,7 @@ Aplikasi ini merupakan sistem manajemen dan pemesanan lapangan olahraga untuk pe
     </td>
     <td align="center">
       <strong>Booking Lapangan</strong><br>
-      <img src="./screenshot/user/BookingLapangan.png" alt="Booking Lapangan" width="300"/>
+      <img src="./screenshot/user/Bookinglapangan.png" alt="Booking Lapangan" width="300"/>
     </td>
   </tr>
   <tr>
