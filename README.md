@@ -7,6 +7,13 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## nama kelompok
+## 1. Anggi Puspita - 20220140123
+## 2. Miftahul huda - 20220140049
+## 3. Reza ashari - 20220140011
+## 4. Adwita Fernanda - 20220140045
+## 5. Nila Ayu Citra Wulan - 20220140138
+
 ## 📸 Tampilan UI
 
 Lihat tampilan antarmuka lengkap di sini:  
