@@ -277,31 +277,41 @@
 
     <div class="container mx-auto px-4 py-6">
   <h1 class="page-title">Daftar Lapangan</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-  @foreach ($lapangans as $lapangan)
-    <div class="pesanan-card">
-      <h3 class="pesanan-title">{{ $lapangan->nama }} ({{ ucfirst($lapangan->jenis) }})</h3>
-      <p class="pesanan-text">
-        Status: 
-        @if ($lapangan->status)
-          <span class="text-green-400 font-semibold">Aktif</span>
-        @else
-          <span class="text-red-500 font-semibold">Tidak Aktif</span>
-        @endif
-      </p>
-
-      @if ($lapangan->status)
-        <a href="{{ route('booking.create', ['lapangan_id' => $lapangan->id]) }}" 
-           class="glitch-button text-[var(--text-light)] inline-block mt-3 px-5 py-2 rounded text-white font-bold border border-purple-500 
-           shadow-[5px_5px_0_#000] bg-gradient-to-br from-[#00f5ff1a] via-[#8b5cf61a] to-[#ff14931a] 
-           hover:shadow-[0_0_10px_#00fff7] hover:border-pink-400 transition-all duration-200">
-          Booking Sekarang
-        </a>
-      @else
-        <span class="block mt-3 text-sm text-red-400 font-mono">Lapangan tidak tersedia</span>
-      @endif
-    </div>
-  @endforeach
+            @foreach ($lapangans as $lapangan)
+              <div class="pesanan-card">
+                  <!-- Tampilkan Gambar -->
+                      @if ($lapangan->gambar)
+                          <img src="{{ asset('storage/' . $lapangan->gambar) }}" alt="{{ $lapangan->nama }}" class="w-full h-88 object-cover rounded mb-4">
+                      @else
+                          <div class="w-full h-88 bg-gray-200 flex items-center justify-center mb-4 rounded">
+                              <span class="text-gray-500">Gambar tidak tersedia</span>
+                          </div>
+                      @endif
+                <h3 class="pesanan-title">{{ $lapangan->nama }} ({{ ucfirst($lapangan->jenis) }})</h3>
+                <p class="pesanan-text">
+                  Status: 
+                  @if ($lapangan->status)
+                    <span class="text-green-400 font-semibold">Aktif</span>
+                  @else
+                    <span class="text-red-500 font-semibold">Tidak Aktif</span>
+                  @endif
+                </p>
+          
+                @if ($lapangan->status)
+                  <a href="{{ route('booking.create', ['lapangan_id' => $lapangan->id]) }}" 
+                     class="glitch-button text-[var(--text-light)] inline-block mt-3 px-5 py-2 rounded text-white font-bold border border-purple-500 
+                     shadow-[5px_5px_0_#000] bg-gradient-to-br from-[#00f5ff1a] via-[#8b5cf61a] to-[#ff14931a] 
+                     hover:shadow-[0_0_10px_#00fff7] hover:border-pink-400 transition-all duration-200">
+                    Booking Sekarang
+                  </a>
+                @else
+                  <span class="block mt-3 text-sm text-red-400 font-mono">Lapangan tidak tersedia</span>
+                @endif
+              </div>
+            @endforeach
+        </div>
 </div>
 
 
