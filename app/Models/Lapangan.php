@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Lapangan extends Model
 {
-    protected $fillable = ['nama', 'jenis','harga','status'];
+    protected $fillable = ['nama', 'jenis','harga','status', 'gambar'];
 
     public function pesanans()
     {
