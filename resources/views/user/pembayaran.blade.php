@@ -39,7 +39,6 @@
 @section('scripts')
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-        // Buat fungsi bisa diakses global
         window.formPembayaran = function(pesananId, lapanganNama, harga) {
 
             Swal.fire({
@@ -114,7 +113,6 @@
             });
         }
 
-        // Fungsi ubah info pembayaran
         window.updateInfoPembayaran = function(metode) {
             const infoEl = document.getElementById('metode-info');
             if (!infoEl) return;

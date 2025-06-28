@@ -7,7 +7,7 @@ use App\Http\Controllers\User\DashboardController;
 use App\Http\Controllers\User\LapanganController;
 use App\Http\Controllers\User\PesananController;
 use App\Http\Controllers\User\PembayaranController;
-
+use App\Http\Controllers\User\BookingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,22 +35,15 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/lapangan', [LapanganController::class, 'index'])->name('user.lapangan');
     Route::get('/pesanan', [PesananController::class, 'index'])->name('user.pesanan');
-    Route::get('/pembayaran', [\App\Http\Controllers\User\PembayaranController::class, 'index'])->name('user.pembayaran');
-Route::post('/pembayaran', [\App\Http\Controllers\User\PembayaranController::class, 'store']);
+    Route::get('/pembayaran', [PembayaranController::class, 'index'])->name('user.pembayaran');
+Route::post('/pembayaran', [PembayaranController::class, 'store']);
 
 });
-
-
-
-
-use App\Http\Controllers\User\BookingController;
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/booking/create', [BookingController::class, 'create'])->name('booking.create');
     Route::post('/booking/store', [BookingController::class, 'store'])->name('booking.store');
 });
-
-
 
 
 //tidak perlu di apa apakan

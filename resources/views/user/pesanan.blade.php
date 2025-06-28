@@ -2,13 +2,6 @@
 
 @section('content')
 
-
-<style>
-    
-</style>
-
-
-
 <div class="container mx-auto px-4 py-6">
     <h1 class="page-title text-black">Riwayat Pesanan Anda</h1>
     
@@ -38,8 +31,8 @@
             </div>
         @endforeach
     @else
-        <div class="empty-state">
-            <p class="empty-state-text">Anda belum memiliki riwayat pesanan.</p>
+        <div class="pesanan-card text-center">
+            <p class="pesanan-text">Anda belum memiliki riwayat pesanan.</p>
         </div>
     @endif
 </div>
