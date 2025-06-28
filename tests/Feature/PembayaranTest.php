@@ -27,7 +27,7 @@ class PembayaranTest extends TestCase
     $user = User::factory()->create();
     $this->actingAs($user);
 
-    $pesanan = Pesanan::factory()->create([
+    $pesanan = \App\Models\Pesanan::factory()->create([
         'user_id' => $user->id,
         'status' => 'pending',
     ]);
@@ -42,7 +42,12 @@ class PembayaranTest extends TestCase
 
     $response = $this->post('/pembayaran', $data);
 
-    $response->assertStatus(302);
+    // Sesuaikan dengan response json kamu
+    $response->assertStatus(200);
+    $response->assertJson([
+        'success' => true,
+        'message' => 'Pembayaran berhasil disimpan!',
+    ]);
 
     $this->assertDatabaseHas('pembayarans', [
         'pesanan_id' => $pesanan->id,
@@ -50,5 +55,4 @@ class PembayaranTest extends TestCase
         'total_bayar' => 50000,
     ]);
 }
-
 }

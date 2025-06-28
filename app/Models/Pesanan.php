@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pesanan extends Model
 {
+    use HasFactory;
     protected $fillable = ['user_id', 'lapangan_id', 'tanggal_booking', 'jam_mulai', 'jam_selesai', 'harga','status'];
 
     public function user()

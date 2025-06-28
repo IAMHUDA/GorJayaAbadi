@@ -17,8 +17,8 @@ class PesananFactory extends Factory
             'user_id' => User::factory(),
             'lapangan_id' => Lapangan::factory(),
             'tanggal_booking' => $this->faker->date(),
-            'jam_mulai' => '08:00',
-            'jam_selesai' => '09:00',
+            'jam_mulai' => $this->faker->time('H:i'),
+            'jam_selesai' => $this->faker->time('H:i'),
             'status' => 'pending',
         ];
     }

@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pembayaran extends Model
 {
+    use HasFactory;
     protected $fillable = ['pesanan_id', 'metode', 'total_bayar', 'status', 'tanggal_bayar'];
 
     public function pesanan()
