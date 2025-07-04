@@ -19,5 +19,5 @@ https://docs.google.com/document/d/1Jdt08uotju1J18_szPknd_4uBhx_5i4B/edit?usp=sh
 ## database 
 ![Picture1](https://github.com/user-attachments/assets/8f337a54-95db-45f6-b31e-7dc7f630986b)
 
-## rangkuman
+## rangkuman/resume
 [Resume PWF_20220140049.pdf](https://github.com/user-attachments/files/21068871/Resume.PWF_20220140049.pdf)
