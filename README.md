@@ -18,6 +18,11 @@
 
 Lihat tampilan antarmuka lengkap di sini:  
 ➡️ [Lihat UI Aplikasi](./READWE..md)
+
+## paper
+
+https://docs.google.com/document/d/1Jdt08uotju1J18_szPknd_4uBhx_5i4B/edit?usp=sharing&ouid=105080106875729124978&rtpof=true&sd=true 
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
